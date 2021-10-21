@@ -26,41 +26,62 @@
           />
         </div>
 
-        <h1>Prynss Maia</h1>
-        <a class="img" href="https://instagram.com/prynssmaia">
+        <h1 id="userName">Prynss Maia</h1>
+        <a class="img" href="https://instagram.com/maykbrito">
           <img src="images/github.svg" alt="Ícone github" />prynssmaia
         </a>
         <p>
           An instructor focused on helping people start programming for werb.
         </p>
-        <ul>
-          <li>
-            <a href="https://instagram.com/prynssmaia">
+        <ul id="socialLinks">
+          <li class="instagram">
+            <a href="https://instagram.com/maykbrito" target="_blank">
               <img
                 src="images/instagram.svg"
                 alt=""
                 srcset=""
-                target="_blank"
               />
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com">
-              <img src="images/twitter.svg" alt="" srcset="" target="_blank" />
+          <li class="twitter">
+            <a href="https://twitter.com/maykbrito" target="_blank">
+              <img src="images/twitter.svg" alt="" srcset=""/>
             </a>
           </li>
-          <li>
-            <a href="https://youtube.com">
-              <img src="images/youtube.svg" alt="" srcset="" target="_blank" />
+          <li class="youtube">
+            <a href="https://youtube.com/maykbrito" target="_blank">
+              <img src="images/youtube.svg" alt="" srcset=""/>
             </a>
           </li>
-          <li>
-            <a href="https://facebook.com">
-              <img src="images/facebook.svg" alt="" srcset="" target="_blank" />
+          <li class="facebook">
+            <a href="https://facebook.com/maykbrito" target="_blank">
+              <img src="images/facebook.svg" alt="" srcset=""/>
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const SocialMediaLinks = {
+        github: "prynssmaia",
+        youtube: "UCfzQfgVXVg0a2FoD7ynaKcA",
+        facebook: "prynssmaia",
+        instagram: "prynssmaia",
+        twitter: "prynssms"
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `http://${social}.com/${SocialMediaLinks[social]}`
+
+        }
+      }
+
+      changeSocialMediaLinks()
+
+    </script>
   </body>
 </html>
